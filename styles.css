@@ -1,61 +1,61 @@
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: rgb(0, 0, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: rgb(0, 0, 0);
+}
+
+.space {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(0, 0, 0);
+  position: relative;
+}
+
+.earth {
+  position: absolute;
+  background-color: blue;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(0, 0, 255, 0.5);
+}
+
+.orbit {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  animation: orbit 5s linear infinite;
+  transform-origin: center center;
+}
+
+.moon {
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(188, 188, 189);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@keyframes orbit {
+  from {
+    transform: rotate(0deg) translate(-50%, -50%);
   }
-  
-  .space {
-    width: 200px;
-    height: 200px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(0, 0, 0);
-    position: relative;
+  to {
+    transform: rotate(360deg) translate(-50%, -50%);
   }
-  
-  .earth {
-    position: absolute;
-    background-color: blue;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    height: 100px;
-    width: 100px;
-    border-radius: 50%;
-    box-shadow: 0 0 20px rgba(0, 0, 255, 0.5);
-  }
-  
-  .orbit {
-    width: 200px;
-    height: 200px;
-    position: absolute;
-    transform: translate(-50%, -50%);
-    animation: orbit 5s linear infinite;
-    transform-origin: center center;
-  }
-  
-  .moon {
-    position: absolute;
-    height: 30px;
-    width: 30px;
-    top: 0;
-    display: flex;
-    justify-content: center;
-    background-color: rgb(188, 188, 189);
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
-    border-radius: 50%;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  
-  @keyframes orbit {
-    from {
-      transform: rotate(0deg) translate(-50%, -50%);
-    }
-    to {
-      transform: rotate(360deg) translate(-50%, -50%);
-    }
-  }
+}
